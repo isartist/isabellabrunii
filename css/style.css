@@ -293,9 +293,10 @@ textarea {
   .projects__row-img-cont {
     overflow: hidden; }
   .projects__row-img {
-    width: 100%;
-    display: block;
-    object-fit: cover; }
+    width: 80%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* This will cover the area without distorting the ratio */
+    display: block; }
   .projects__row-content {
     padding: 2rem 0;
     display: flex;

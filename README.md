@@ -86,7 +86,7 @@ Go to `/index.html` and fill your information, there are 6 sections:
           class="header__logo-img"
         />
       </div>
-      <span class="header__logo-sub">John Doe</span>
+      <span class="header__logo-sub">Isabella Bruni</span>
     </div>
     <div class="header__main">
       <ul class="header__links">
@@ -97,7 +97,7 @@ Go to `/index.html` and fill your information, there are 6 sections:
           <a href="./#about" class="header__link">About </a>
         </li>
         <li class="header__link-wrapper">
-          <a href="./#projects" class="header__link"> Projects </a>
+          <a href="./#recent-works" class="header__link"> Projects </a>
         </li>
         <li class="header__link-wrapper">
           <a href="./#contact" class="header__link"> Contact </a>
@@ -124,7 +124,7 @@ Go to `/index.html` and fill your information, there are 6 sections:
         </li>
 
         <li class="header__sm-menu-link">
-          <a href="./#projects"> Projects </a>
+          <a href="./#recent-works"> Projects </a>
         </li>
 
         <li class="header__sm-menu-link">
@@ -147,7 +147,7 @@ Go to `/index.html` and fill your information, there are 6 sections:
 <!-- **** Hero Section of Homepage **** -->
 <section class="home-hero">
   <div class="home-hero__content">
-    <h1 class="heading-primary">Hey, My name is John Doe</h1>
+    <h1 class="heading-primary">Hey, My name is Isabella Bruni</h1>
     <div class="home-hero__info">
       <p class="text-primary">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
@@ -156,7 +156,7 @@ Go to `/index.html` and fill your information, there are 6 sections:
       </p>
     </div>
     <div class="home-hero__cta">
-      <a href="./#projects" class="btn btn--bg">Projects</a>
+      <a href="./#recent-works" class="btn btn--bg">Projects</a>
     </div>
   </div>
   <div class="home-hero__socials">
@@ -239,7 +239,7 @@ Go to `/index.html` and fill your information, there are 6 sections:
         <div class="about__content-details">
           <p class="about__content-details-para">
             Hey! It's
-            <strong>John Doe</strong>
+            <strong>Isabella Bruni</strong>
             and I'm a <strong> Frontend Web Developer </strong> located in Los
             Angeles. I've done
             <strong> remote </strong>
@@ -506,7 +506,7 @@ If you like to know how to submit forms so you can receive the form details in y
         </div>
       </div>
       <div class="main-footer__row main-footer__row-2">
-        <h4 class="heading heading-sm text-lt">John Doe</h4>
+        <h4 class="heading heading-sm text-lt">Isabella Bruni</h4>
         <p class="main-footer__short-desc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit facilis
           tempora explicabo quae quod deserunt
