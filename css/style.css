@@ -246,18 +246,22 @@ textarea {
     margin-top: 5rem;
     text-align: center; }
 
-    .resume-iframe {
-      width: 100%;
-      height: 700px; /* Default height for larger screens */
-      border: none;
+/* Default iframe style */
+.resume-iframe {
+  width: 100%;
+  height: 700px; /* Default height for larger screens */
+  border: none;
+  overflow: auto; /* Allow scrolling within the iframe */
+}
+
+/* Mobile style */
+@media (max-width: 768px) { /* Adjust this value based on your mobile breakpoint */
+  .resume-iframe {
+      height: 400px; /* Adjusted height for mobile screens */
+      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
   }
-  
-  /* Mobile style */
-  @media (max-width: 768px) { /* Adjust this value based on your mobile breakpoint */
-      .resume-iframe {
-          height: 400px; /* Adjusted height for mobile screens */
-      }
-  }
+}
+
   
 
 .about {
