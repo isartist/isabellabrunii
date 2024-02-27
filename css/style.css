@@ -245,16 +245,22 @@ textarea {
   .home-hero__cta {
     margin-top: 5rem;
     text-align: center; }
-
     .resume-link-container {
-      padding-top: 2%;
-      text-align: center; /* Center the link */
-      margin: 20px 0; /* Add some space above and below the link */
+      padding-bottom: 2%;
+      text-align: center; /* Center the button */
     }
-
+    
+    /* Hide the iframe on mobile devices */
+    @media (max-width: 768px) {
+      .pdf-container iframe {
+        display: none;
+      }
+    }
+    
+    /* Show both the button and iframe on non-mobile devices */
     @media (min-width: 769px) {
-      .pdf-container {
-        display: none; /* Hide the button and show only the iframe on larger screens */
+      .pdf-container iframe, .resume-link-container {
+        display: block;
       }
     }
     
