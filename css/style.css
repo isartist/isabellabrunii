@@ -253,7 +253,7 @@ textarea {
     }
 
     @media (min-width: 769px) {
-      .resume-link-container {
+      .pdf-container {
         display: none; /* Hide the button and show only the iframe on larger screens */
       }
     }
