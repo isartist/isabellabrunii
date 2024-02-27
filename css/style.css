@@ -251,6 +251,12 @@ textarea {
       text-align: center; /* Center the link */
       margin: 20px 0; /* Add some space above and below the link */
     }
+
+    @media (min-width: 769px) {
+      .resume-link-container {
+        display: none; /* Hide the button and show only the iframe on larger screens */
+      }
+    }
     
 
 
