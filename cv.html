@@ -92,16 +92,42 @@
 
 
     <section id="cv" class="about sec-pad">
+      <style>
+        .pdf-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.pdf-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+      </style>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          if (window.innerWidth < 768) { // Example breakpoint for mobile devices
+            // Mobile-specific behavior here
+            // For instance, changing the iframe to a download link or adjusting its visibility
+            const pdfContainer = document.querySelector('.pdf-container');
+            pdfContainer.innerHTML = '<a href="./assets/pdf/IsabellaBruniCV.pdf" class="btn btn--med btn--theme dynamicBgClr">Download CV</a>';
+          }
+        });
+        </script>
         <div class="main-container">
           <h2 class="heading heading-sec heading-sec__mb-bg">
             <span class="heading-sec__main">CV</span>
           </h2>
-          <div class="resume-link-container">
+          <!-- <div class="resume-link-container">
             <a href="./assets/pdf/IsabellaBruniCV.pdf" target="_blank" class="btn btn--med btn--theme dynamicBgClr">View In New Tab</a>
-          </div>
+          </div> -->
           <div class="pdf-container">
-            <iframe src="./assets/pdf/IsabellaBruniCV.pdf" style="width: 100%; height: 800px; border: none;" allow="autoplay"></iframe>
-          </div>
+            <iframe src="./assets/pdf/IsabellaBruniCV.pdf" frameborder="0" allowfullscreen></iframe>
+          </div>          
         </div>
       </section>
 

@@ -110,13 +110,19 @@
         
         /* Style for the image and overlay container */
         .image-overlay-container {
-          position: relative;
+          display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative;
+  height: 100%; /* Ensure it takes full height of its parent if not set */
           overflow: hidden;
           cursor: pointer; /* Indicates that the item is interactive */
         }
         
         .projects__row-img {
           width: 100%;
+          max-width: 100%; /* Ensure the image is not wider than its container */
+  max-height: 100%; 
           height: auto; /* Maintain aspect ratio */
           display: block; /* Ensure the image fills the container */
         }
