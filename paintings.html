@@ -16,8 +16,61 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+    <style>
+      .projects__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* Adjust the gap between images as needed */
+      }
+      
+      .projects__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-around; /* This helps in evenly distributing the images in a row */
+        flex-wrap: wrap;
+      }
+      
+      /* Style for the image and overlay container */
+      .image-overlay-container {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer; /* Indicates that the item is interactive */
+      }
+      
+      .projects__row-img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure the image fills the container */
+      }
+      
+      /* Overlay text styles */
+      .overlay-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+        color: black; /* Text color */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Hide initially */
+        transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+        padding: 10px; /* Padding around text */
+        font-size: 16px; /* Adjust font size as needed */
+      }
+      
+      /* Show overlay text on hover */
+      .image-overlay-container:hover .overlay-text {
+        opacity: 1;
+      }
+      </style>
     <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
@@ -90,6 +143,7 @@
     </header>
     
     <section id="paintings" class="projects sec-pad">
+      
         <div class="main-container">
           <h2 class="heading heading-sec heading-sec__mb-bg">
             <span class="heading-sec__main">Paintings</span>
@@ -98,253 +152,117 @@
               <!-- Below are some of my recent works. -->
             </span>
           </h2>
-  
-          <div class="projects__content">
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                  src="./assets/png/desk.png"
-                  alt="Desk"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">Blue Shoes</h3>
-                <p class="projects__row-content-desc">
-                  Painted this little guy a while ago but I love it so much…I’m bringing back the fabric! 🥿🥿
-                  <br>8x8 acrylic and fabric on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-1.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
+
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/desk.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
             </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/stars.png"
-                  alt="Star Painting"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/stars.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
             </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/vase.png"
-                  alt="Vase"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/vase.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
             </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/top.png"
-                  alt="Top"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/top.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
             </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/dog.png"
-                  alt="Dog"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/dog.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
             </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/oil.png"
-                  alt="Oil Painting"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/oil.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
             </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/shoes.png"
-                  alt="Shoes"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/shoes.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
             </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/vases.png"
-                  alt="Vases"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/vases.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
             </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/purse.png"
-                  alt="Purse"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/purse.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
             </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/blue-shoes.png"
-                  alt="Blue Shoes Painting"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="image-overlay-container">
+                <img src="./assets/png/ornage.png" alt="Painting" class="projects__row-img" loading="lazy"/>
+                <div class="overlay-text">
+                  <p>Title</p>
+                  <p>Medium</p>
+                  <p>Size</p>
+                  <p>Year</p>
+                </div>
               </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
-              </div>
-            </div>
-            <div class="projects__row">
-              <div class="projects__row-img-cont">
-                <img
-                src="./assets/png/ornage.png"
-                  alt="Orange Painting"
-                  class="projects__row-img"
-                  loading="lazy"
-                />
-              </div>
-              <div class="projects__row-content">
-                <!-- <h3 class="projects__row-content-title">she’s a 🌟</h3>
-                <p class="projects__row-content-desc">
-                  30x40 acrylic on canvas
-                </p> -->
-                <!-- <a
-                  href="./project-2.html"
-                  class="btn btn--med btn--theme dynamicBgClr"
-                  target="_blank"
-                  >Case Study</a
-                > -->
-              </div>
-            </div>
-           
-        
             </div>
           </div>
         </div>
