@@ -115,21 +115,28 @@
   border: none;
 }
       </style>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const isMobile = window.innerWidth < 1000; // Example breakpoint for mobile devices
-          const pdfContainer = document.querySelector('.pdf-container');
-          const resumeLinkContainer = document.querySelector('.resume-link-container');
-          if (isMobile) {
-            // Hide the iframe and show only the download/view button for mobile devices
-            pdfContainer.style.display = 'none';
-            resumeLinkContainer.innerHTML = ' <a href="./assets/pdf/IsabellaBruniCV.pdf" target="_blank" class="btn btn--med btn--theme dynamicBgClr">View in New Tab</a>';
-          } else {
-            // Show the iframe for desktop devices
-            pdfContainer.style.display = 'block';
-          }
-        });
-      </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Adjust the breakpoint for mobile devices to 1000 pixels
+    const isMobile = window.innerWidth < 1000;
+    const pdfContainer = document.querySelector('.pdf-container');
+    const resumeLinkContainer = document.querySelector('.resume-link-container');
+
+    if (isMobile) {
+      // Hide the iframe for devices considered as mobile
+      pdfContainer.style.display = 'none';
+      // Display a button for viewing the PDF in a new tab
+      resumeLinkContainer.innerHTML = '<a href="./assets/pdf/IsabellaBruniCV.pdf" target="_blank" class="btn btn--med btn--theme dynamicBgClr">View in New Tab</a>';
+      resumeLinkContainer.style.display = 'flex';
+      resumeLinkContainer.style.justifyContent = 'center'; // Ensure the button is centered
+    } else {
+      // Show the iframe for devices not considered as mobile
+      pdfContainer.style.display = 'block';
+      // Optionally hide the resume link container if you only want to show it for mobile users
+      resumeLinkContainer.style.display = 'none';
+    }
+  });
+</script>
         <div class="main-container">
           <h2 class="heading heading-sec heading-sec__mb-bg">
             <span class="heading-sec__main">CV</span>
