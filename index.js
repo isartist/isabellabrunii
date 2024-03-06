@@ -81,27 +81,27 @@ fetch('/paintings.html')
   console.error('Failed to load contact page content', err);
 });
 
-fetch('/cv.html')
-.then(response => response.text())
-.then(html => {
-  // Parse the fetched HTML text
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(html, 'text/html');
+// fetch('/cv.html')
+// .then(response => response.text())
+// .then(html => {
+//   // Parse the fetched HTML text
+//   const parser = new DOMParser();
+//   const doc = parser.parseFromString(html, 'text/html');
 
-  // Select the section with id="about"
-  const aboutSection = doc.querySelector('#cv');
+//   // Select the section with id="about"
+//   const aboutSection = doc.querySelector('#cv');
 
-  // Check if the section exists
-  if (aboutSection) {
-    // Inject the 'about' section into the DOM
-    document.getElementById('cv-content').innerHTML = aboutSection.outerHTML;
-  } else {
-    console.error('About section not found');
-  }
-})
-.catch(err => {
-  console.error('Failed to load contact page content', err);
-});
+//   // Check if the section exists
+//   if (aboutSection) {
+//     // Inject the 'about' section into the DOM
+//     document.getElementById('cv-content').innerHTML = aboutSection.outerHTML;
+//   } else {
+//     console.error('About section not found');
+//   }
+// })
+// .catch(err => {
+//   console.error('Failed to load contact page content', err);
+// });
 
 fetch('/about.html')
 .then(response => response.text())
