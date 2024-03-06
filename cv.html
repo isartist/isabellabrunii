@@ -88,47 +88,23 @@
         </div>
       </div>
     </header>
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Isabella Bruni</h1>
-        <div class="home-hero__info">
-          <!-- <p class="text-primary">
-            INSERT NEXT HERE
-          </p> -->
-        </div>
-        <!-- <div class="home-hero__cta">
-          <a href="./index.html#recent-works" class="btn btn--bg">Paintings</a>
-        </div> -->
-      </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="https://www.linkedin.com/in/isabellabruni" target="_blank" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/linkedin-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a
-            href="https://www.instagram.com/isabellabruniart" target="_blank"
-            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-          >
-            <img
-              src="./assets/png/insta-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
-
     
+
+
+    <section id="resume" class="about sec-pad">
+        <div class="main-container">
+          <h2 class="heading heading-sec heading-sec__mb-bg">
+            <span class="heading-sec__main">CV</span>
+          </h2>
+          <div class="resume-link-container">
+            <a href="./assets/pdf/IsabellaBruniCV.pdf" target="_blank" class="btn btn--med btn--theme dynamicBgClr">View In New Tab</a>
+          </div>
+          <div class="pdf-container">
+            <iframe src="./assets/pdf/IsabellaBruniCV.pdf" style="width: 100%; height: 800px; border: none;" allow="autoplay"></iframe>
+          </div>
+        </div>
+      </section>
+
     
     <footer class="main-footer">
       <div class="main-container">
@@ -165,46 +141,6 @@
       </div>
     </footer>
 
-    <script>
-      // ---
-const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
-const smallMenu = document.querySelector('.header__sm-menu')
-const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
-const headerHamMenuCloseBtn = document.querySelector(
-  '.header__main-ham-menu-close'
-)
-const headerSmallMenuLinks = document.querySelectorAll('.header__sm-menu-link')
-
-hamMenuBtn.addEventListener('click', () => {
-  if (smallMenu.classList.contains('header__sm-menu--active')) {
-    smallMenu.classList.remove('header__sm-menu--active')
-  } else {
-    smallMenu.classList.add('header__sm-menu--active')
-  }
-  if (headerHamMenuBtn.classList.contains('d-none')) {
-    headerHamMenuBtn.classList.remove('d-none')
-    headerHamMenuCloseBtn.classList.add('d-none')
-  } else {
-    headerHamMenuBtn.classList.add('d-none')
-    headerHamMenuCloseBtn.classList.remove('d-none')
-  }
-})
-
-for (let i = 0; i < headerSmallMenuLinks.length; i++) {
-  headerSmallMenuLinks[i].addEventListener('click', () => {
-    smallMenu.classList.remove('header__sm-menu--active')
-    headerHamMenuBtn.classList.remove('d-none')
-    headerHamMenuCloseBtn.classList.add('d-none')
-  })
-}
-
-// ---
-const headerLogoConatiner = document.querySelector('.header__logo-container')
-
-headerLogoConatiner.addEventListener('click', () => {
-  location.href = 'index.html'
-})
-
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -88,47 +88,84 @@
         </div>
       </div>
     </header>
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Isabella Bruni</h1>
-        <div class="home-hero__info">
-          <!-- <p class="text-primary">
-            INSERT NEXT HERE
-          </p> -->
+    
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__sub">
+            <!-- REPLACE WITH ONE or TWO SENETENCES -->
+            <p>
+              Isabella Bruni is an emerging artist from Toronto, Ontario. She is currently completing her Bachelor of Fine Arts from Western University in the spring of 2024, specializing in studio art.
+            </p>
+            <br>
+            <p>
+              Her artistic practice utilizes acrylic paint and textile collage to explore the transformative power of objects in the everyday through still life painting. Her work takes inspiration from interior design, specifically mid-century modern formations. 
+
+            </p>
+            <br>
+            <p>
+              Isabella’s work has been exhibited in numerous shows throughout her time at Western University, including the Annual Juried Exhibition in 2022 and 2024. Isabella has also been a frequent participant in various USC Public Arts Commission exhibitions throughout the years. She is involved in teaching fine arts to children and young adults with special needs since 2021 and works alongside her mother as an interior designer while also managing all social media platforms. Isabella is on track to receive her degree in interior design after the completion of her bachelor’s degree in fine arts. 
+
+            </p>
+            
+
+
+
+          </span>
+        </h2>
+        <div class="about__content">
+         
+          <div class="about__content-main">
+            <h3 class="about__content-title">Current Projects:</h3>
+            <!-- <h3 class="about__content-title">Get to know me!</h3> -->
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                2024 Annual Juried Exhibition in Artlab and Cohen Commons Gallery at Western University, London, Ontario.
+              </p>
+              <!-- <p class="about__content-details-para">
+
+                Hey! I'm
+                <strong>Isabella Bruni</strong>
+                and I'm a <strong> Fine Arts Student </strong> at Western University.
+              </p> -->
+            </div>
+            <!-- <a href="./index.html#contact" class="btn btn--med btn--theme dynamicBgClr"
+              >Contact</a
+            > -->
+          </div>
+          <div class="about__content-skills">
+            <!-- <h3 class="about__content-title">Recently:</h3> -->
+            
+            <div class="skills">
+              <img
+                src="./assets/png/awards.png"
+                alt="Annual Juried Exhibition"
+                class="projects__row-img"
+                loading="lazy"
+              />
+              <!-- <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div>
+              <div class="skills__skill">JavaScript</div>
+              <div class="skills__skill">React</div>
+              <div class="skills__skill">SASS</div>
+              <div class="skills__skill">GIT</div>
+              <div class="skills__skill">Shopify</div>
+              <div class="skills__skill">Wordpress</div>
+              <div class="skills__skill">Google ADS</div>
+              <div class="skills__skill">Facebook Ads</div>
+              <div class="skills__skill">Android</div>
+              <div class="skills__skill">IOS</div> -->
+            </div>
+            <div class="about__content-details">
+              <!-- <p class="about__content-details-para">
+                Big thank you to all the people who came out to this years Annual Juried Exhibition!❤️ <br> Loved being apart of such a great show and thanks for choosing such a great wall colour for me!
+              </p> -->
+            </div>
+          </div>
         </div>
-        <!-- <div class="home-hero__cta">
-          <a href="./index.html#recent-works" class="btn btn--bg">Paintings</a>
-        </div> -->
-      </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="https://www.linkedin.com/in/isabellabruni" target="_blank" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/linkedin-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a
-            href="https://www.instagram.com/isabellabruniart" target="_blank"
-            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-          >
-            <img
-              src="./assets/png/insta-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
       </div>
     </section>
-
-    
     
     <footer class="main-footer">
       <div class="main-container">
@@ -165,46 +202,6 @@
       </div>
     </footer>
 
-    <script>
-      // ---
-const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
-const smallMenu = document.querySelector('.header__sm-menu')
-const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
-const headerHamMenuCloseBtn = document.querySelector(
-  '.header__main-ham-menu-close'
-)
-const headerSmallMenuLinks = document.querySelectorAll('.header__sm-menu-link')
-
-hamMenuBtn.addEventListener('click', () => {
-  if (smallMenu.classList.contains('header__sm-menu--active')) {
-    smallMenu.classList.remove('header__sm-menu--active')
-  } else {
-    smallMenu.classList.add('header__sm-menu--active')
-  }
-  if (headerHamMenuBtn.classList.contains('d-none')) {
-    headerHamMenuBtn.classList.remove('d-none')
-    headerHamMenuCloseBtn.classList.add('d-none')
-  } else {
-    headerHamMenuBtn.classList.add('d-none')
-    headerHamMenuCloseBtn.classList.remove('d-none')
-  }
-})
-
-for (let i = 0; i < headerSmallMenuLinks.length; i++) {
-  headerSmallMenuLinks[i].addEventListener('click', () => {
-    smallMenu.classList.remove('header__sm-menu--active')
-    headerHamMenuBtn.classList.remove('d-none')
-    headerHamMenuCloseBtn.classList.add('d-none')
-  })
-}
-
-// ---
-const headerLogoConatiner = document.querySelector('.header__logo-container')
-
-headerLogoConatiner.addEventListener('click', () => {
-  location.href = 'index.html'
-})
-
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
