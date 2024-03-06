@@ -97,7 +97,14 @@
   position: relative;
   overflow: hidden;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
+
 }
+.resume-link-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
 
 .pdf-container iframe {
   position: absolute;
@@ -110,14 +117,19 @@
       </style>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-          if (window.innerWidth < 768) { // Example breakpoint for mobile devices
-            // Mobile-specific behavior here
-            // For instance, changing the iframe to a download link or adjusting its visibility
-            const pdfContainer = document.querySelector('.pdf-container');
-            pdfContainer.innerHTML = '<a href="./assets/pdf/IsabellaBruniCV.pdf" class="btn btn--med btn--theme dynamicBgClr">Download CV</a>';
+          const isMobile = window.innerWidth < 768; // Example breakpoint for mobile devices
+          const pdfContainer = document.querySelector('.pdf-container');
+          const resumeLinkContainer = document.querySelector('.resume-link-container');
+          if (isMobile) {
+            // Hide the iframe and show only the download/view button for mobile devices
+            pdfContainer.style.display = 'none';
+            resumeLinkContainer.innerHTML = '<a href="./assets/pdf/IsabellaBruniCV.pdf" download class="btn btn--med btn--theme dynamicBgClr">Download CV</a>';
+          } else {
+            // Show the iframe for desktop devices
+            pdfContainer.style.display = 'block';
           }
         });
-        </script>
+      </script>
         <div class="main-container">
           <h2 class="heading heading-sec heading-sec__mb-bg">
             <span class="heading-sec__main">CV</span>
@@ -125,6 +137,9 @@
           <!-- <div class="resume-link-container">
             <a href="./assets/pdf/IsabellaBruniCV.pdf" target="_blank" class="btn btn--med btn--theme dynamicBgClr">View In New Tab</a>
           </div> -->
+          <div class="resume-link-container">
+
+          </div>
           <div class="pdf-container">
             <iframe src="./assets/pdf/IsabellaBruniCV.pdf" frameborder="0" allowfullscreen></iframe>
           </div>          
