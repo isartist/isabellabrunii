@@ -185,16 +185,20 @@ textarea {
   display: none; }
 
 .home-hero {
-  
+
   color: #fff;
   background-image: url('../assets/png/header1.png');
-  /* background-size: 80%; */
-  /* background-repeat: no-repeat;  */
+  background-color: #cf151552; /* Replace #blueishColor with the actual color code you want */
+  background-repeat: no-repeat; 
   background-position: center;
   height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
-  position: relative; }
+  position: relative;
+  /* background: linear-gradient(to right, rgba(204, 158, 76, 0.8), rgba(204, 158, 76, 0.8)), url(../../assets/svg/common-bg.svg); */
+  
+  /* background-size: 80%; */
+ }
   @media only screen and (max-width: 37.5em) {
     .home-hero {
       height: unset;
