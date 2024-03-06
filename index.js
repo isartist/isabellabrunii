@@ -40,8 +40,86 @@ headerLogoConatiner.addEventListener('click', () => {
 fetch('/contact.html')
 .then(response => response.text())
 .then(html => {
-  // Inject the fetched content into the DOM
-  document.getElementById('contact-content').innerHTML = html;
+  // Parse the fetched HTML text
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+
+  // Select the section with id="about"
+  const aboutSection = doc.querySelector('#contact');
+
+  // Check if the section exists
+  if (aboutSection) {
+    // Inject the 'about' section into the DOM
+    document.getElementById('contact-content').innerHTML = aboutSection.outerHTML;
+  } else {
+    console.error('About section not found');
+  }
+})
+.catch(err => {
+  console.error('Failed to load contact page content', err);
+});
+
+fetch('/paintings.html')
+.then(response => response.text())
+.then(html => {
+  // Parse the fetched HTML text
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+
+  // Select the section with id="about"
+  const aboutSection = doc.querySelector('#paintings');
+
+  // Check if the section exists
+  if (aboutSection) {
+    // Inject the 'about' section into the DOM
+    document.getElementById('paintings-content').innerHTML = aboutSection.outerHTML;
+  } else {
+    console.error('About section not found');
+  }
+})
+.catch(err => {
+  console.error('Failed to load contact page content', err);
+});
+
+fetch('/cv.html')
+.then(response => response.text())
+.then(html => {
+  // Parse the fetched HTML text
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+
+  // Select the section with id="about"
+  const aboutSection = doc.querySelector('#cv');
+
+  // Check if the section exists
+  if (aboutSection) {
+    // Inject the 'about' section into the DOM
+    document.getElementById('cv-content').innerHTML = aboutSection.outerHTML;
+  } else {
+    console.error('About section not found');
+  }
+})
+.catch(err => {
+  console.error('Failed to load contact page content', err);
+});
+
+fetch('/about.html')
+.then(response => response.text())
+.then(html => {
+  // Parse the fetched HTML text
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+
+  // Select the section with id="about"
+  const aboutSection = doc.querySelector('#about');
+
+  // Check if the section exists
+  if (aboutSection) {
+    // Inject the 'about' section into the DOM
+    document.getElementById('about-content').innerHTML = aboutSection.outerHTML;
+  } else {
+    console.error('About section not found');
+  }
 })
 .catch(err => {
   console.error('Failed to load contact page content', err);
