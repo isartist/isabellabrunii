@@ -117,13 +117,13 @@
       </style>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-          const isMobile = window.innerWidth < 768; // Example breakpoint for mobile devices
+          const isMobile = window.innerWidth < 1000; // Example breakpoint for mobile devices
           const pdfContainer = document.querySelector('.pdf-container');
           const resumeLinkContainer = document.querySelector('.resume-link-container');
           if (isMobile) {
             // Hide the iframe and show only the download/view button for mobile devices
             pdfContainer.style.display = 'none';
-            resumeLinkContainer.innerHTML = ' <a href="./assets/pdf/IsabellaBruniCV.pdf" target="_blank" class="btn btn--med btn--theme dynamicBgClr">Open in New Tab</a> <a href="./assets/pdf/IsabellaBruniCV.pdf" download class="btn btn--med btn--theme dynamicBgClr">Download CV</a>';
+            resumeLinkContainer.innerHTML = ' <a href="./assets/pdf/IsabellaBruniCV.pdf" target="_blank" class="btn btn--med btn--theme dynamicBgClr">View in New Tab</a>';
           } else {
             // Show the iframe for desktop devices
             pdfContainer.style.display = 'block';
@@ -138,7 +138,6 @@
             <a href="./assets/pdf/IsabellaBruniCV.pdf" target="_blank" class="btn btn--med btn--theme dynamicBgClr">View In New Tab</a>
           </div> -->
           <div class="resume-link-container">
-            
           </div>
           <div class="pdf-container">
             <iframe src="./assets/pdf/IsabellaBruniCV.pdf" frameborder="0" allowfullscreen></iframe>
