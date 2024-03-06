@@ -185,7 +185,7 @@ textarea {
 
 .home-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(255, 213, 128, 0.8), rgba(255, 213, 128, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(204, 158, 76, 0.8), rgba(204, 158, 76, 0.8)), url(../assets/svg/common-bg.svg);
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -245,29 +245,6 @@ textarea {
   .home-hero__cta {
     margin-top: 5rem;
     text-align: center; }
-    .resume-link-container {
-      padding-bottom: 2%;
-      text-align: center; /* Center the button */
-    }
-    
-    @media (max-width: 1024px), (orientation: portrait) {
-      .pdf-container iframe {
-        display: none;
-      }
-    }
-    
-    /* Show both the button and iframe on larger devices, including iPads in landscape orientation */
-    @media (min-width: 1025px), (orientation: landscape) {
-      .pdf-container iframe, .resume-link-container {
-        display: block;
-      }
-    }
-
-
-    
-
-
-  
 
 .about {
   background: #fafafa; }
@@ -298,10 +275,6 @@ textarea {
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
 
-        .about__content-main {
-          grid-row: 1;
-        }
-
 .projects__row {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -320,7 +293,7 @@ textarea {
   .projects__row-img-cont {
     overflow: hidden; }
   .projects__row-img {
-    width: 80%;
+    width: 100%;
     display: block;
     object-fit: cover; }
   .projects__row-content {
@@ -350,7 +323,7 @@ textarea {
           font-size: 1.7rem; } }
 
 .contact {
-  background: linear-gradient(to right, rgba(255, 213, 128, 0.8), rgba(255, 213, 128, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(204, 158, 76, 0.8), rgba(204, 158, 76, 0.8)), url(../../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center; }
   .contact__form-container {
@@ -431,7 +404,7 @@ textarea {
 
 .project-cs-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(255, 213, 128, 0.8), rgba(255, 213, 128, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(204, 158, 76, 0.8), rgba(204, 158, 76, 0.8)), url(../../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center;
   position: relative; }

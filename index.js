@@ -37,4 +37,12 @@ headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
 
-
+fetch('/contact.html')
+.then(response => response.text())
+.then(html => {
+  // Inject the fetched content into the DOM
+  document.getElementById('contact-content').innerHTML = html;
+})
+.catch(err => {
+  console.error('Failed to load contact page content', err);
+});
